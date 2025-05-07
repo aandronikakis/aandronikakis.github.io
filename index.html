@@ -1,1 +1,282 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Andreas Andronikakis | Research Prompt & Data Engineer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-color: #f4f7fa;
+      --text-color: #2c3e50;
+      --card-bg: #fff;
+      --accent: #0077cc;
+      --accent-hover: #005fa3;
+    }
+
+    [data-theme="dark"] {
+      --bg-color: #1c1f26;
+      --text-color: #f1f1f1;
+      --card-bg: #2a2e37;
+      --accent: #4fa3ff;
+      --accent-hover: #3b8de0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-color);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 2.5rem;
+      background: var(--card-bg);
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 {
+      font-size: 2.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.1rem;
+      margin: 0.25rem 0;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    .section {
+      margin-bottom: 2.5rem;
+    }
+
+    h2 {
+      border-left: 4px solid var(--accent);
+      padding-left: 0.75rem;
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+      animation: zoomIn 0.5s ease-in-out;
+    }
+
+    ul {
+      padding-left: 1.25rem;
+      margin: 0.5rem 0;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    .subhead {
+      font-weight: 600;
+    }
+
+    .avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 1rem;
+      display: block;
+      object-fit: cover;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .theme-toggle {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      background: var(--card-bg);
+      color: var(--text-color);
+      border: 1px solid var(--accent);
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .theme-toggle:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      margin-top: 1rem;
+    }
+
+    .resume-btn:hover {
+      background: var(--accent-hover);
+    }
+
+    /* Reveal Animation */
+    .reveal {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    .reveal.reveal-visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    @keyframes zoomIn {
+      from {
+        transform: scale(0.98);
+        opacity: 0;
+      }
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .container {
+        padding: 1.25rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()">Toggle Theme</button>
+
+  <div class="container">
+    <header>
+      <img src="me_enhanced.jpg" alt="Andreas Avatar" class="avatar">
+      <h1>Andreas Andronikakis</h1>
+      <p><strong>Research Prompt & Data Engineer</strong></p>
+      <p class="contact">
+        📧 <a href="mailto:aandronikakis@gmail.com">Email</a> |
+        💼 <a href="https://www.linkedin.com/in/andreas-andronikakis/">LinkedIn</a> |
+        💻 <a href="https://github.com/aandronikakis">GitHub</a>
+      </p>
+      <p><a class="resume-btn" href="Andronikakis_CV-1.pdf" download>📄 Download CV (Updated May '25)</a></p>
+    </header>
+
+    <section class="section reveal">
+      <h2>Education</h2>
+      <p><strong>M.Phil, Computer Science</strong>, University of Manchester (Feb 2025)<br>
+      <em>Performance Analysis for Memory Optimisations of Managed Graph Databases on NUMA Architectures</em></p>
+
+      <p><strong>Ph.D. Candidate, Computer Science</strong>, University of Manchester (2017–2025)<br>
+      <em>Research on memory optimisations using Neo4j and MaxineVM</em></p>
+
+      <p><strong>Diploma, Electronic and Computer Engineering</strong>, Technical University of Crete (2009–2017)<br>
+      <em>Thesis: Memory System Evaluation for Disintegrated Cloud Servers</em></p>
+    </section>
+
+    <section class="section reveal">
+      <h2>Experience</h2>
+      <p><strong>Research Prompt Engineer</strong>, University of Manchester (2025–Present)</p>
+      <ul>
+        <li>Fine-tuning LLMs for Java performance using TornadoVM</li>
+        <li>Dataset curation and integration with open-source tools</li>
+      </ul>
+
+      <p><strong>Data Engineer / Research Assistant</strong>, University of Manchester (2023–2024)</p>
+      <ul>
+        <li>Benchmarking pipelines using Python/Bash</li>
+        <li>Memory layout tuning on managed runtimes</li>
+      </ul>
+
+      <p><strong>Research Assistant</strong>, University of Manchester (ENCRYPT, ELEGANT, ACTiCLOUD)</p>
+      <ul>
+        <li>VM/compiler research with MaxineVM and ARM architecture</li>
+      </ul>
+    </section>
+
+    <section class="section reveal">
+      <h2>Skills</h2>
+      <p><span class="subhead">Languages:</span> Java, Python, C/C++, R, Go, SQL, Bash, C#, Cypher, Prolog</p>
+      <p><span class="subhead">AI & ML:</span> LLMs, PyTorch, Hugging Face, Prompt Engineering</p>
+      <p><span class="subhead">Data Engineering:</span> Neo4j, MySQL, dbt, Airflow, Spark, Kafka</p>
+      <p><span class="subhead">Cloud & Tools:</span> GCP, AWS, Docker, Terraform</p>
+      <p><span class="subhead">Systems:</span> TornadoVM, MaxineVM, NUMA, JVM Optimization</p>
+    </section>
+
+    <section class="section reveal">
+      <h2>Publications</h2>
+      <ul>
+        <li><em>MPhil Thesis:</em> Performance analysis for memory optimisations, 2025</li>
+        <li>“A multifaceted memory analysis of Java benchmarks” – MPLR 2023</li>
+        <li>“Scaling managed applications on NUMA systems” – ISMM 2023</li>
+        <li>“dReDBox: A disaggregated architectural perspective” – Springer 2019</li>
+        <li>“On the future of research VMs” – ACM Programming 2018</li>
+      </ul>
+    </section>
+  </div>
+
+  <script>
+    function toggleTheme() {
+      var currentTheme = document.documentElement.getAttribute("data-theme");
+      var newTheme = currentTheme === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", newTheme);
+      localStorage.setItem("theme", newTheme);
+    }
+
+    (function () {
+      var savedTheme = localStorage.getItem("theme");
+      if (savedTheme) {
+        document.documentElement.setAttribute("data-theme", savedTheme);
+      }
+
+      // Scroll Reveal Effect
+      var reveals = document.querySelectorAll('.reveal');
+      var observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('reveal-visible');
+          }
+        });
+      }, { threshold: 0.1 });
+
+      reveals.forEach(reveal => {
+        observer.observe(reveal);
+      });
+    })();
+  </script>
+</body>
+</html>
+
